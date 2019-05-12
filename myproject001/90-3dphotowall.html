@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>photowall</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-image: url(../images/background.jpg);
+            background-size: cover;
+            overflow: hidden;
+        }
+        ul{
+            width: 100px;
+            height: 100px;
+            margin-bottom: 30px;
+            position: absolute;
+            bottom: 100px;
+            left: 50%;
+            margin-left : -50px;
+            transform-style: preserve-3d;
+            animation: sport 6s linear 0s infinite;
+        }
+        ul li{
+            width: 100px;
+            height: 100px;
+            list-style:none;
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 20px;
+            text-align: center;
+            line-height: 100px;
+            background-color: black;
+        }
+        ul:hover{
+            animation:paused;
+        }
+        ul:hover li img{
+            opacity:0.5;
+        }
+        ul li:hover img{
+            opacity:1;
+        }
+        ul li:nth-child(1){
+
+            transform: rotateY(60deg)translateZ(100px);
+        }
+        ul li:nth-child(2){
+
+            transform: rotateY(120deg)translateZ(100px);
+        }
+        ul li:nth-child(3){
+
+            transform: rotateY(180deg)translateZ(100px);
+        }
+        ul li:nth-child(4){
+
+            transform: rotateY(240deg)translateZ(100px);
+        }
+        ul li:nth-child(5){
+
+            transform: rotateY(300deg)translateZ(100px);
+        }
+        ul li:nth-child(6){
+
+            transform: rotateY(360deg)translateZ(100px);
+        }
+        ul li img{
+            width: 100px;
+            height: 100px;
+            border: 6px solid skyblue;
+            box-sizing: border-box;
+        }
+        @keyframes sport {
+            from{
+                /*
+                把不改变的写前面
+                */
+                transform: rotateX(-10deg) rotateY(0deg);
+            }
+            to{
+                transform: rotateX(-10deg) rotateY(360deg);
+            }
+        }
+        body>img{
+            width: 157px;
+            height: 200px;
+            position: absolute;
+            bottom: 60px;
+            left: 50px;
+        }
+        .love1{
+            animation: sport2 25s linear 0s infinite normal;
+        }
+        .love2{
+            animation: sport2 10s linear 0s infinite normal;
+        }
+        .love3{
+            animation: sport2 15s linear 0s infinite normal;
+        }
+        .love4{
+            animation: sport2 20s linear 0s infinite normal;
+        }
+        @keyframes sport2 {
+            0%{
+                left: 50px;
+                bottom: 60px;
+                opacity: 0;
+            }
+            20%{
+                left: 250px;
+                bottom: 200px;
+                opacity:1;
+            }
+            40%{
+                left: 450px;
+                bottom: 400px;
+                opacity:0;
+            }
+            60%{
+                left: 700px;
+                bottom: 300px;
+                opacity:1;
+            }
+            80%{
+                left: 1200px;
+                bottom: 110px;
+                opacity:0;
+            }
+            100%{
+                left: 800px;
+                bottom: 0px;
+                opacity:1;
+            }
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li><img src="images/bestg1.jpg" alt=""></li>
+    <li><img src="images/bestg2.jpg" alt=""></li>
+    <li><img src="images/bestg3.jpg" alt=""></li>
+    <li><img src="images/bestg4.jpg" alt=""></li>
+    <li><img src="images/bestg5.jpg" alt=""></li>
+    <li><img src="images/bestg6.jpg" alt=""></li>
+</ul>
+<img src="images/timg.png" class="love1">
+<img src="images/timg.png" class="love2">
+<img src="images/timg.png" class="love3">
+<img src="images/timg.png" class="love4">
+<audio src="../music/wedding.mp3" autoplay="autoplay" loop="loop">
+</audio>
+</body>
+</html>
